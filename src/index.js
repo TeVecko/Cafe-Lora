@@ -19,7 +19,20 @@ polozkyMenu.forEach((element) => {
   });
 });
 
-// const objednat = document.querySelector('.order-btn');
-// objednat.addEventListener('click', (event) => {
-//   console.log('Stisknuto');
-// })
+const objednat = document.querySelector('.order-btn');
+const vybranyDrink = document.querySelector('.drink__cup');
+const tlacitkoObjednat = document.querySelector('.order-btn');
+
+let ordered = true;
+
+objednat.addEventListener('click', (event) => {
+  if (ordered) {
+    ordered = false;
+    tlacitkoObjednat.innerHTML = 'Zrušit';
+    vybranyDrink.classList.add('drink__cup--selected');
+  } else {
+    ordered = true;
+    tlacitkoObjednat.innerHTML = 'Objednat';
+    vybranyDrink.classList.remove('drink__cup--selected');
+  }
+});
