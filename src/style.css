@@ -232,6 +232,7 @@ nav a:hover {
 }
 
 .gallery {
+  position: relative;
   padding-top: 0;
   height: 100vh;
 
@@ -240,6 +241,16 @@ nav a:hover {
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
+}
+
+.popis {
+  position: absolute;
+  padding: 50px 100px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  left: 50px;
+  top: 500px;
 }
 
 .contacts {
